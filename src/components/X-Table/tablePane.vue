@@ -292,10 +292,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.table-wapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .tool {
   margin-bottom: 16px;
 }
 .page {
+  width: 100%;
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;

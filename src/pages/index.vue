@@ -116,13 +116,7 @@ export default {
               label: '分享渠道',
               prop: 'shareChannel',
               width: 120,
-              formatter: function (val) {
-                if (val.shareChannel === 1) {
-                  return 'IOS'
-                } else {
-                  return 'Android'
-                }
-              }
+              formatter: val => val.shareChannel === 1 ? 'IOS' : 'Android'
             },
             {
               label: '分享平台',

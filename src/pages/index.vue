@@ -92,40 +92,36 @@ export default {
             },
             {
               label: '分享人脸影号',
-              prop: 'userId'
+              prop: 'userId',
+              width: 150
             },
             {
               label: '分享人昵称',
-              prop: 'nickName'
+              prop: 'nickName',
+              width: 150
             },
             {
               label: '分享的时间',
               prop: 'shareTime',
-              formatter: function (val) {
-                return formatDate(val.shareTime)
-              }
+              width: 170,
+              formatter: val => formatDate(val.shareTime)
             },
             {
               label: '过期时间',
               prop: 'expireTime',
-              formatter: function (val) {
-                return formatDate(val.expireTime)
-              }
+              width: 170,
+              formatter: val => formatDate(val.expireTime)
             },
             {
               label: '分享渠道',
               prop: 'shareChannel',
-              formatter: function (val) {
-                if (val.shareChannel === 1) {
-                  return 'IOS'
-                } else {
-                  return 'Android'
-                }
-              }
+              width: 120,
+              formatter: val => val.shareChannel === 1 ? 'IOS' : 'Android'
             },
             {
               label: '分享平台',
               prop: 'shareToWhere',
+              width: 120,
               formatter: function (val) {
                 if (val.shareToWhere === 1) {
                   return '朋友圈'
@@ -143,6 +139,8 @@ export default {
               }
             }
           ],
+          border: false, // 开启表格边框
+          stripe: true, // 开启表格斑马纹
           isSelection: true, // 开启表格多选
           handleSelectionChange: this.handleSelectionChange, // 表格多选回调函数，isSelection为false时不传
           isIndex: true, // 开启列表序号

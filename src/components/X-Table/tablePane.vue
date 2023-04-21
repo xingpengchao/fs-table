@@ -19,6 +19,7 @@
       ref="table"
       v-loading="dataSource.loading"
       :border="dataSource.border ? true : false"
+      :stripe="dataSource.stripe ? true : false"
       style="width: 100%"
       :class="{ 'no-data': !dataSource.data || !dataSource.data.length }"
       :data="dataSource.data"
@@ -216,6 +217,8 @@
 //   ],
 //   data: [],                        // 表格数据
 //   columns: [],                     // 表格列配置
+//   border: true,                    // 开启表格边框
+//   stripe: true,                    // 开启表格斑马纹
 //   isSelection: false,              // 表格有多选时设置
 //   handleSelectionChange:(val)=>{}  // 表格多选回调函数
 //   isIndex: true,                   // 显示表格序号

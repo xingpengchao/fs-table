@@ -139,6 +139,8 @@ export default {
               }
             }
           ],
+          border: false, // 开启表格边框
+          stripe: true, // 开启表格斑马纹
           isSelection: true, // 开启表格多选
           handleSelectionChange: this.handleSelectionChange, // 表格多选回调函数，isSelection为false时不传
           isIndex: true, // 开启列表序号

@@ -266,6 +266,7 @@ export default {
     }
   },
   watch: {
+    // 监听表格columns
     'dataSource.columns': {
       handler () {
         // 解决表格列变动的抖动问题

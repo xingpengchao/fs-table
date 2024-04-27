@@ -19,6 +19,7 @@
       ref="table"
       v-loading="dataSource.loading"
       :border="dataSource.border ? true : false"
+      :stripe="dataSource.stripe ? true : false"
       style="width: 100%"
       :class="{ 'no-data': !dataSource.data || !dataSource.data.length }"
       :data="dataSource.data"
@@ -216,6 +217,8 @@
 //   ],
 //   data: [],                        // 表格数据
 //   columns: [],                     // 表格列配置
+//   border: true,                    // 开启表格边框
+//   stripe: true,                    // 开启表格斑马纹
 //   isSelection: false,              // 表格有多选时设置
 //   handleSelectionChange:(val)=>{}  // 表格多选回调函数
 //   isIndex: true,                   // 显示表格序号
@@ -263,6 +266,7 @@ export default {
     }
   },
   watch: {
+    // 监听表格columns
     'dataSource.columns': {
       handler () {
         // 解决表格列变动的抖动问题
@@ -292,10 +296,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.table-wapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .tool {
   margin-bottom: 16px;
 }
 .page {
+  width: 100%;
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;

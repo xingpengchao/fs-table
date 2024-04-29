@@ -2,7 +2,7 @@
  * @Author: allenxing 2659489932@qq.com
  * @Date: 2023-04-17 21:58:57
  * @LastEditors: allenxing 2659489932@qq.com
- * @LastEditTime: 2024-04-27 16:42:58
+ * @LastEditTime: 2024-04-29 14:01:41
  * @Description:
  *
  * Copyright (c) 2024 by allenxing 2659489932@qq.com, All Rights Reserved.
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import fsTable from '@/components/fs-fsable/fs-table.vue'
+import fsTable from '@/components/fs-table/fs-table.vue'
 import { formatDate } from '@/utils/source'
 
 export default {
